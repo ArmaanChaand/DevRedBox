@@ -15,7 +15,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "incremental": true,
     "plugins": [
       {
@@ -35,8 +35,9 @@
     ".next/types/**/*.ts",
     "lib/contents/**/*.mdx",
     "contents/blog/sample-blog.mdx",
-    ".next/dev/types/**/*.ts"
-, "next.config.ts"  ],
+    ".next/dev/types/**/*.ts",
+    "next.config.ts"
+  ],
   "exclude": [
     "node_modules"
   ]

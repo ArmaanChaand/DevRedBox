@@ -1,6 +1,6 @@
 // Local env extracts
 export const GAID = process.env.GAID || ""
-export const MEETING_LINK = process.env.MEETING_LINK || ""
+export const MEETING_LINK = process.env.NEXT_PUBLIC_MEETING_LINK || ""
 
 export const SITE_ORIGIN = process.env.SITE_ORIGIN || "https://www.devredbox.in"
 export const LIBRARY_ORIGIN = process.env.SITE_ORIGIN || "https://library.devredbox.in"

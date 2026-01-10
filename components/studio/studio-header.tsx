@@ -4,10 +4,8 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import Image from "next/image";
-import { DEVREDBOX_GITHUB } from "@/lib/info";
+import { MEETING_LINK } from "@/lib/info";
 import { DevRedBoxLogo } from "../ui/devredbox-logo";
-import { Separator } from "../ui/separator";
-import { IconGitHub } from "../ui/icons";
 import { Button } from "../ui/button";
 
 const Link = motion.create(NextLink)
@@ -42,16 +40,17 @@ export default function StudioHeader() {
                     <Link className="main-nav-item" href="/#pricing">Pricing</Link>
                     <Link className="main-nav-item" href="/contact">Contact</Link>
                     <Link className="main-nav-item" href="/#faq">FAQs</Link>
-                    <Separator orientation="vertical" className="!h-4 hidden lg:block" />
-                    <a
-                        href={DEVREDBOX_GITHUB}
-                        target="_blank"
-                        title="DevRedBox GitHub Page"
-                        rel="noopener noreferrer"
-                        aria-label="Open DevRedBox GitHub in new tab"
-                    >
-                        <IconGitHub className="size-5" />
-                    </a>
+                    <Button variant={'outline'} className="bg-background! ml-2 border-2 hover:bg-secondary!" size={'lg'} asChild>
+                        <a
+                            href={MEETING_LINK}
+                            target="_blank"
+                            title="Book a Call"
+                            rel="noopener noreferrer"
+                            aria-label="Book a Call with Armaan Chaand"
+                        >
+                            Book a Call
+                        </a>
+                    </Button>
                 </nav>
                 <Button onClick={() => setOpen(v => !v)} variant="ghost" size="icon" className="ml-auto md:hidden relative z-0" >
                     {open ?

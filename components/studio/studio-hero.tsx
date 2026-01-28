@@ -6,7 +6,7 @@ export default function HeroStudio() {
                 <h1
                     className="text-3xl md:text-5xl lg:text-7xl max-w-4xl font-semibold"
                 >
-                    Let's build, launch & scale <br/> your <span className="underline italic font-black">million dollar</span> idea
+                    Let&apos;s build, launch & scale <br/> your <span className="underline italic font-black">million dollar</span> idea
                 </h1>
 
                 <p

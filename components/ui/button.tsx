@@ -10,9 +10,11 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
+          "bg-background text-foreground shadow-xs hover:bg-foreground/90 ring-foreground",
+        inverted:
           "bg-foreground text-background shadow-xs hover:bg-foreground/90 ring-foreground",
         primary:
-          "bg-primary text-foreground shadow-xs hover:bg-primary/80 ring-primary",
+          "bg-primary text-primary-foreground shadow-xs hover:bg-primary/80 ring-primary",
         destructive:
           "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
@@ -31,7 +33,7 @@ const buttonVariants = cva(
       },
       decoration: {
         none: "",
-        ring: "ring-2 ring-offset-3 hover:ring-offset-4 ring-offset-background",
+        ring: "ring-2 ring-offset-2 hover:ring-offset-3 ring-offset-background",
       },
       shape: {
         none: "",

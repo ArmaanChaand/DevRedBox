@@ -54,14 +54,14 @@ Muted Foreground Dark = #C2BCBB
 
 :root {
   --radius: 0.65rem;
-  --background: oklch(94.669% 0.03098 75.171);
+  --background: hsl(60, 26%, 95%);
   --foreground: oklch(0.1776 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.1776 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.1776 0 0);
   --primary: oklch(0.5161 0.2019 25.94);
-  --primary-foreground: oklch(0.971 0.013 17.38);
+  --primary-foreground: hsl(60, 26%, 95%);
   --secondary: oklch(0.967 0.001 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
   --muted: oklch(0.967 0.001 286.375);
@@ -69,7 +69,7 @@ Muted Foreground Dark = #C2BCBB
   --accent: oklch(0.967 0.001 286.375);
   --accent-foreground: oklch(0.21 0.006 285.885);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.92 0.004 286.32);
+  --border: hsl(210, 14%, 88%);
   --input: oklch(0.92 0.004 286.32);
   --ring: oklch(0.5161 0.2019 25.94);
   --chart-1: oklch(0.646 0.222 41.116);
@@ -155,13 +155,6 @@ Muted Foreground Dark = #C2BCBB
 
 
 
-@utility dual-col-p {
-  @apply text-muted-foreground [&_span]:text-foreground
-}
-
-@utility dotted-bg {
-  @apply bg-[radial-gradient(color-mix(in_oklab,_var(--muted)_50%,_transparent)_1px,transparent_1px)] bg-[length:8px_8px]
-}
 
 @layer base {
   * {
@@ -169,32 +162,38 @@ Muted Foreground Dark = #C2BCBB
   }
 
   body {
-    @apply bg-background text-foreground selection:bg-primary/30 selection:text-[#faebd7];
+    @apply bg-background text-foreground selection:bg-primary selection:text-primary-foreground
   }
 
 }
 
-.synced-width {
-  @apply w-11/12 xl:w-10/12 2xl:w-8/12
-}
+@layer components {
+  .dual-col-p {
+    @apply text-muted-foreground [&_span]:text-foreground
+  }
 
-.library-wrapper {
-  @apply w-11/12 mx-auto
-}
+  .synced-width {
+    @apply w-11/12 xl:w-10/12 2xl:w-8/12
+  }
 
-.main-nav-item {
-  @apply hover:underline underline-offset-2 transition-all
-}
+  .library-wrapper {
+    @apply w-11/12 mx-auto
+  }
 
-.toc-link {
-  @apply data-[onpage=true]:text-foreground hover:text-foreground transition-all
-}
+  .main-nav-item {
+    @apply hover:underline underline-offset-2 transition-all
+  }
 
-/* paragraph */
-.p-content {
-  @apply text-muted-foreground text-base tracking-wide text-pretty
-}
+  .toc-link {
+    @apply data-[onpage=true]:text-foreground hover:text-foreground transition-all
+  }
 
-.line>span {
-  @apply text-[var(--shiki-light)] dark:text-[var(--shiki-dark)]
+  /* paragraph */
+  .p-content {
+    @apply text-muted-foreground text-base tracking-wide text-pretty
+  }
+
+  .line>span {
+    @apply text-[var(--shiki-light)] dark:text-[var(--shiki-dark)]
+  }
 }

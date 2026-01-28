@@ -9,7 +9,7 @@ import FooterStudio from "@/components/studio/studio-footer";
 
 const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["400", "700"]
+  weight: "variable"
 })
 
 export const viewport: Viewport = {
@@ -57,10 +57,10 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={"dark overflow-x-hidden" + " " + outfit.className} // Space at the end of string is required
+        className={"" + " " + outfit.className} // Space at the end of string is required
       >
         <StudioHeader />
-        <main>
+        <main className="min-h-screen">
           {children}
         </main>
         <FooterStudio />

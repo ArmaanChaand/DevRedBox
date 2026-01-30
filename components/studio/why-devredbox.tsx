@@ -3,7 +3,7 @@ import { Badge } from "../ui/badge";
 
 export default function WhyDevRedBox() {
     return (
-        <section className="mt-24 mx-auto synced-width grid sm:grid-cols-3 gap-2">
+        <section className="mt-24 mx-auto section-wrapper grid sm:grid-cols-3 gap-2">
             <div className="col-span-2 p-5 border rounded-lg bg-secondary/20 space-y-5">
                 <Badge variant="link" className="text-sm pl-0">
                     Why DevRedBox

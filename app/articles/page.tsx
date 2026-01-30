@@ -19,7 +19,7 @@ export default function ArticlesPage() {
             <header
                 className="w-screen fixed top-0 z-50 bg-background overflow-hidden h-24"
             >
-                <div className="flex items-center synced-width mx-auto py-5 relative">
+                <div className="flex items-center section-wrapper mx-auto py-5 relative">
                     <Link href="/" >
                         <DevRedBoxLogo />
                     </Link>

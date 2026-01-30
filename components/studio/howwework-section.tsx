@@ -8,7 +8,7 @@ export default function HowWeWork() {
 
 
     return (
-        <div className="synced-width mx-auto md:h-[500vh] relative mt-20" id="how-it-works">
+        <div className="section-wrapper mx-auto md:h-[500vh] relative mt-20" id="how-it-works">
             <section
                 className="mx-auto flex flex-col md:flex-row justify-between items-center bg-accent/30 px-0 md:px-7 py-7 rounded-xl gap-10 -top-24 sm:top-24 static md:sticky z-10"
             >

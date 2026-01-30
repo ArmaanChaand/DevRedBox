@@ -7,7 +7,7 @@ import { ALLUITOOLS_ORIGIN, LIBRARY_ORIGIN, MEETING_LINK } from "@/lib/info";
 
 export default function FooterStudio() {
     return (
-        <footer className="synced-width mx-auto relative mt-20">
+        <footer className="section-wrapper mx-auto relative mt-20">
             <div className="w-full grid grid-cols-1 sm:grid-cols-2">
                 <div>
                     <Link href="/" className="text-xl font-black relative w-fit block">

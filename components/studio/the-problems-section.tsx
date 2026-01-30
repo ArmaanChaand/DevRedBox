@@ -4,7 +4,7 @@ export default function TheProblem() {
 
 
     return (
-        <div className="synced-width mx-auto">
+        <div className="section-wrapper mx-auto">
             <section
                 className="w-full grid md:grid-cols-2 border rounded-xl md:gap-8"
             >

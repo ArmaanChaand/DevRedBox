@@ -17,7 +17,7 @@ export const metadata: Metadata = generateStaticMetadata({
 export default function Home() {
     return (
         <>
-            <section className="h-fit mt-20 synced-width mx-auto mb-10">
+            <section className="h-fit mt-20 section-wrapper mx-auto mb-10">
                 <h1 className="text-6xl sm:text-8xl font-black">Contact Us</h1>
                 <p className="text-sm sm:text-base pl-2 mt-2 text-muted-foreground lg:w-10/12">
                     You can easily book
@@ -30,7 +30,7 @@ export default function Home() {
                     {" "}
                     If you’d prefer, you can also reach out to us directly — whether you’d like more information, want to discuss a project idea, or simply wish to leave a message. Use the contact links provided below to get in touch, and we’ll get back to you as soon as possible.</p>
             </section>
-            <section className="synced-width mx-auto mb-20">
+            <section className="section-wrapper mx-auto mb-20">
                 <div className="w-full grid sm:grid-cols-2 gap-5">
                     <div className="bg-secondary p-5 rounded">
                         <h2 className="text-sm mb-3">Our Socials</h2>

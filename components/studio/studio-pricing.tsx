@@ -32,7 +32,7 @@ const PRICES: PricingBoxProps[] = [
 
 export default function StudioPricing() {
     return (
-        <section className="mt-24 mx-auto synced-width flex flex-col justify-start items-center text-center gap-5" id="pricing">
+        <section className="mt-24 mx-auto section-wrapper flex flex-col justify-start items-center text-center gap-5" id="pricing">
 
             <Badge variant="link" className="text-sm pl-0" asChild>
                 <h2>

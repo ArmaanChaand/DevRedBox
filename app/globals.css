@@ -65,7 +65,7 @@ Muted Foreground Dark = #C2BCBB
   --secondary: oklch(0.967 0.001 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
   --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
+  --muted-foreground: hsl(240, 2%, 54%);
   --accent: oklch(0.967 0.001 286.375);
   --accent-foreground: oklch(0.21 0.006 285.885);
   --destructive: oklch(0.577 0.245 27.325);
@@ -172,12 +172,8 @@ Muted Foreground Dark = #C2BCBB
     @apply text-muted-foreground [&_span]:text-foreground
   }
 
-  .synced-width {
-    @apply w-11/12 xl:w-10/12 2xl:w-8/12
-  }
-
-  .library-wrapper {
-    @apply w-11/12 mx-auto
+  .section-wrapper {
+    @apply w-11/12 xl:w-10/12 2xl:w-8/12 mx-auto
   }
 
   .main-nav-item {

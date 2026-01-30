@@ -17,7 +17,7 @@ export default function StudioHeader() {
             }}
         >
             <p className="w-full text-base py-1 bg-foreground text-background text-center">Website is under development!</p>
-            <div className="synced-width mx-auto flex justify-between items-center">
+            <div className="section-wrapper mx-auto flex justify-between items-center">
                 <Button onClick={() => setOpen(v => !v)} variant={"outline"} className="md:hidden shadow-none">
                     {open ? <X /> : <Menu />}
                     {open ? "Close" : "Menu"}
@@ -71,7 +71,7 @@ export default function StudioHeader() {
                     </a>
                 </Button>
             </div>
-            <nav style={{ display: open ? "block" : "none" }} className="synced-width mx-auto">
+            <nav style={{ display: open ? "block" : "none" }} className="section-wrapper mx-auto">
                 <ul className="flex text-xl flex-col justify-start items-start mt-8 gap-5">
                     <li className="">
                         <Link href={"/about"}>

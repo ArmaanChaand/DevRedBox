@@ -1,7 +1,7 @@
 export default function HeroStudio() {
 
     return (
-        <section className="synced-width mx-auto flex justify-between items-center relative overflow-hidden">
+        <section className="section-wrapper mx-auto flex justify-between items-center relative overflow-hidden">
             <div className="min-h-[500px] h-screen max-h-[1000px] flex flex-col justify-center items-center text-center gap-12 mx-auto">
                 <h1
                     className="text-3xl md:text-5xl lg:text-7xl max-w-4xl font-semibold"

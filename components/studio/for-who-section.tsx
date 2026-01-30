@@ -5,7 +5,7 @@ import { MEETING_LINK } from "@/lib/info";
 
 export default function ForWhoSection() {
     return (
-        <section className="synced-width mx-auto text-start mt-20 space-y-8">
+        <section className="section-wrapper mx-auto text-start mt-20 space-y-8">
             <h2 className="text-balance font-bold text-2xl dual-col-p">
                 This Works <span>Best If You:</span>
             </h2>

@@ -10,6 +10,7 @@ import TheProblem from "@/components/studio/the-problems-section";
 import ForWhoSection from "@/components/studio/for-who-section";
 import WhyDevRedBox from "@/components/studio/why-devredbox";
 import FooterCTA from "@/components/studio/footer-cta";
+import DeveloperSection from "@/components/studio/developer-section";
 
 export const metadata: Metadata = generateStaticMetadata({
   title: "Welcome to DevRedBox",
@@ -24,6 +25,9 @@ export default function Home() {
   return (
     <>
       <HeroStudio />
+      <div className="mb-28">
+        <DeveloperSection />
+      </div>
       <TheProblem />
       <HowWeWork />
       <ForWhoSection />

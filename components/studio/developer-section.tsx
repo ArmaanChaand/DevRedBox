@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { IconLinkedIn, IconTwitter } from "@/components/ui/icons";
-import { TypographyBlockquote } from "@/components/ui/typography/blockquote";
-import { SquareArrowOutUpRight } from "lucide-react";
+import { Quote, SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
 
 export default function DeveloperSection() {
@@ -26,13 +25,15 @@ export default function DeveloperSection() {
               <span className="text-foreground">Armaan Chaand.</span> Founder & Developer
             </h3>
 
-            <TypographyBlockquote className="text-lg">
-              &quot;I design, build, and ship internal tools and SaaS MVPs under DevRedBox Studio –
+            <blockquote
+              className="italic text-base sm:text-lg"
+            >
+              <Quote className="inline-block fill-foreground -scale-x-100 mr-2" />
+              I design, build, and ship internal tools and SaaS MVPs under DevRedBox Studio –
               taking full responsibility from idea to deployment.
-              <br />
               I’ve shipped real products using Next.js, Firebase, and modern frontend tooling —
-              the same stack your product will be built on.&quot;
-            </TypographyBlockquote>
+              the same stack your product will be built on.
+            </blockquote>
             <div className="w-full grid grid-cols-2 sm:flex justify-start items-center gap-6">
               <Button className="bg-[#0A66C2] hover:bg-[#0A66C2]/90 " size={"xl"} variant={"inverted"} asChild>
                 <a href="http://linkedin.com/in/armaanchaand/" target="_blank">
@@ -55,6 +56,6 @@ export default function DeveloperSection() {
         </div>
 
       </div>
-    </section>
+    </section >
   );
 }

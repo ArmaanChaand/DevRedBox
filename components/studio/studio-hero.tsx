@@ -6,14 +6,13 @@ export default function HeroStudio() {
                 <h1
                     className="text-3xl md:text-5xl lg:text-7xl max-w-4xl font-semibold"
                 >
-                    Let&apos;s build, launch & scale <br/> your <span className="underline italic font-black">million dollar</span> idea
+                    Let&apos;s build, launch & scale <br /> your <span className="underline italic font-black">million dollar</span> idea
                 </h1>
 
                 <p
-                    className="text-base md:text-xl w-full max-w-xl md:max-w-2xl leading-relaxed text-foreground"
+                    className="text-base md:text-xl w-full max-w-xl md:max-w-3xl text-foreground"
                 >
-                    DevRedBox helps founders build, launch and scale SaaS MVPs without wasting time and money.
-                    No agency layers. No handoffs. You work directly with the developer building your product.
+                    DevRedBox helps founders build, launch, and scale SaaS MVPs without wasting time or needing to learn technical jargon just to prompt. You work directly with the developer who builds your product and handles all the technical stuff.
                 </p>
             </div>
         </section>

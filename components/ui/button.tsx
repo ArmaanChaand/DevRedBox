@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-background text-foreground shadow-xs hover:bg-foreground/90 ring-foreground",
+          "bg-background text-foreground shadow-xs hover:bg-background/80 ring-foreground",
         inverted:
           "bg-foreground text-background shadow-xs hover:bg-foreground/90 ring-foreground",
         primary:

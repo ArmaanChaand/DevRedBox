@@ -50,7 +50,6 @@ export default function DeveloperSection() {
                   <SquareArrowOutUpRight className="size-3" />
                 </a>
               </Button>
-
             </div>
           </div>
         </div>

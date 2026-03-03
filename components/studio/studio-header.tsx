@@ -16,7 +16,6 @@ export default function StudioHeader() {
                 height: open ? "100vh" : "fit-content"
             }}
         >
-            <p className="w-full text-base py-1 bg-foreground text-background text-center">Website is under development!</p>
             <div className="section-wrapper mx-auto flex justify-between items-center">
                 <Button onClick={() => setOpen(v => !v)} variant={"outline"} className="md:hidden shadow-none">
                     {open ? <X /> : <Menu />}

@@ -5,6 +5,7 @@ import generateStaticMetadata from "@/lib/static-metadata";
 import { WebSiteMicrodata } from "@/lib/info-tsx";
 import AboutSection from "@/components/studio/about-section";
 import ServicesSection from "@/components/studio/services-section";
+import ProjectsSection from "@/components/studio/projects-section";
 
 export const metadata: Metadata = generateStaticMetadata({
   title: "DevRedBox Studio",
@@ -34,13 +35,12 @@ export default function Home() {
         <ServicesSection />
       </div>
       
+      <div className="mb-28">
+        <ProjectsSection />
+      </div>
+      
       <WebSiteMicrodata />
+
     </>
   );
 }
-/*
-
- */
-
-/*
- */

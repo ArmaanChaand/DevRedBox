@@ -1,5 +1,4 @@
 import StaggeredSpan from "@/components/ui/staggered-span";
-import { Tooltip } from "@/components/ui/tooltip-card";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -12,14 +11,12 @@ export default function ServicesSection() {
         </span>{" "}
         What we specialize in?
       </h2>
-      <p className="text-center flex justify-center items-center flex-wrap gap-1.5 text-lg sm:text-xl font-semibold max-w-6xl mx-auto">
+      <p className="text-center flex justify-center items-center flex-wrap gap-1.5 text-lg sm:text-xl font-medium max-w-6xl mx-auto">
         <StaggeredSpan>
           We build web-based SaaS products from the ground up — an MVP or pick
           up where from where you left off. We use
         </StaggeredSpan>
-        <Tooltip content={<NextJsCard />}>
-          <ImgSpan src={"/logos/nextjs.webp"} title="NextJs" />
-        </Tooltip>
+        <ImgSpan src={"/logos/nextjs.webp"} title="NextJs" />
         <ImgSpan src={"/logos/react.svg"} title="ReactJs" />
         <span>and</span>
         <ImgSpan
@@ -89,18 +86,3 @@ export function ImgSpan({
     </span>
   );
 }
-
-const NextJsCard = () => {
-  return (
-    <span>
-      <img
-        src="/logos/nextjs-full.svg"
-        alt="Tyler Durden"
-        className="block aspect-video w-full rounded-sm"
-      />
-      <span className="my-4 flex flex-col">
-        {/* TODO: */}
-      </span>
-    </span>
-  );
-};

@@ -24,7 +24,7 @@ const PROJECTS = [
 
 export default function ProjectsSection() {
   return (
-    <section className="hidden lg:block w-11/12 mx-auto min-h-[300vh]">
+    <section className="hidden lg:block w-11/12 mx-auto min-h-[200vh]">
       <div className="relative flex gap-8 lg:gap-16">
         {/* Left panel */}
         <div className="flex-1">

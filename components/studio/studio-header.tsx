@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { DevRedBoxLogoRaw } from "../ui/devredbox-logo";
 import { Button } from "@/components/ui/button";
-import { Equal, Menu, X } from "lucide-react";
+import { Equal, X } from "lucide-react";
 import { useState } from "react";
 import { MEETING_LINK } from "@/lib/info";
 

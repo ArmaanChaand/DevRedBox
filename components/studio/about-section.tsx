@@ -1,6 +1,5 @@
-import { Button } from "@/components/ui/button";
+import DeveloperDialog from "@/components/studio/developer-dialog";
 import { DevRedBoxLogoRaw } from "@/components/ui/devredbox-logo";
-import Image from "next/image";
 
 export default function AboutSection() {
   return (
@@ -36,16 +35,7 @@ export default function AboutSection() {
         </p>
         <p className="text-end">— Armaan Chaand</p>
         <div className="w-full flex ">
-          <Button variant={"default"} className="h-fit w-full max-w-xs font-semibold mx-auto">
-            <Image
-              src="/armaan-chaand.webp"
-              alt="Armaan Chaand"
-              className="object-cover w-10 h-10 rounded-full shrink-0"
-              width={64}
-              height={64}
-            />
-            Talk with Armaan
-          </Button>
+          <DeveloperDialog />
         </div>
       </div>
     </section>

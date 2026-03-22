@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/library/:path*',
-        destination: 'https://library.devredbox.in',
+        destination: 'https://library.devredbox.in/:path*',
         permanent: true
       },
     ]

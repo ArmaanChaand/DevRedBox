@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function ServicesSection() {
   return (
     <section className="section-wrapper space-y-8">
-      <h2 className="text-3xl md:text-4xl font-black text-muted-foreground text-center">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-muted-foreground text-center">
         <span className="text-foreground underline underline-offset-2">
           Our Services.
         </span>{" "}

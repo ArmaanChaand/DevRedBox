@@ -43,25 +43,25 @@ export default function Page() {
                     What We Build
                 </h2>
                 <p>
-                    When the idea is solid but the product doesn't exist yet, we do our best work. We take care of the build, whether it's a SaaS platform, a web app for clients, or an internal tool, so you can focus on other things.
+                    When the idea is solid but the product doesn&apos;t exist yet, we do our best work. We take care of the build, whether it&apos;s a SaaS platform, a web app for clients, or an internal tool, so you can focus on other things.
                 </p>
                 <h2>
                     Our Code Library
                 </h2>
                 <p>
-                    Over time, we've made our own code library, which is a collection of components, tools, kits, and patterns that we've improved on with each project we've worked on. It means you won't have to do the same work over and over again, and you'll have more time to fix problems that are unique to your product.
+                    Over time, we&apos;ve made our own code library, which is a collection of components, tools, kits, and patterns that we&apos;ve improved on with each project we&apos;ve worked on. It means you won&apos;t have to do the same work over and over again, and you&apos;ll have more time to fix problems that are unique to your product.
                 </p>
                 <h2>
-                    We've Been on Your Side Too
+                    We&apos;ve Been on Your Side Too
                 </h2>
                 <p>
-                    Because we have built our own SaaS product, we understand the decisions you're making: what to build first, what to cut, and what really matters at the beginning.
+                    Because we have built our own SaaS product, we understand the decisions you&apos;re making: what to build first, what to cut, and what really matters at the beginning.
                 </p>
                 <h2>
-                    Let's Build Something
+                    Let&apos;s Build Something
                 </h2>
                 <p>
-                    If you're an early-stage founder looking for a studio that can move fast without cutting corners, we'd love to hear about what you're building.
+                    If you&apos;re an early-stage founder looking for a studio that can move fast without cutting corners, we&apos;d love to hear about what you&apos;re building.
                 </p>
             </section>
         </div>

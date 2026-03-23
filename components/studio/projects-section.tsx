@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { DEVREDBOX_PROJECTS } from "@/lib/content/projects";
-import { ArrowUpRight, ChevronRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function ProjectsSection() {
   return (

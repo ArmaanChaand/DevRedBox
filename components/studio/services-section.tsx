@@ -14,7 +14,7 @@ export default function ServicesSection() {
       <p className="text-center flex justify-center items-center flex-wrap gap-1.5 text-lg sm:text-xl font-medium max-w-6xl mx-auto">
         <StaggeredSpan>
           We build web-based SaaS products from the ground up — an MVP or pick
-          up where from where you left off. We use
+          up from where you left off. We use
         </StaggeredSpan>
         <ImgSpan src={"/logos/nextjs.webp"} title="NextJs" />
         <ImgSpan src={"/logos/react.svg"} title="ReactJs" />

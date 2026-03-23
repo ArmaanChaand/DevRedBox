@@ -1,62 +1,17 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, useCarousel } from "@/components/ui/carousel";
 import Image from "next/image";
+import Autoplay from "embla-carousel-autoplay"
+import { DEVREDBOX_PROJECTS } from "@/lib/content/projects";
+import { ArrowUpRight } from "lucide-react";
 
-const PROJECTS = [
-  {
-    title: "Code Library",
-    detail:
-      "But YC doesn't end on Demo Day. We and the YC alumni network continue to help founders for the life of their company, and beyond.",
-    banner: "/projects/library.webp",
-    logo: "/logos/nextjs.webp",
-    link: "https://library.devredbox.in",
-  },
-  {
-    title: "ThouHomar",
-    detail:
-      "But YC doesn't end on Demo Day. We and the YC alumni network continue to help founders for the life of their company, and beyond.",
-    banner: "/devredbox-banner.webp",
-    logo: "/logos/supabase.svg",
-    link: "https://thouhomar.xyz",
-  },
-];
 
 export default function ProjectSectionMobile() {
-  const [api, setApi] = useState<CarouselApi>();
-  const intervalRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
-  useEffect(() => {
-    if (!api) return;
-
-    const startAutoplay = () => {
-      intervalRef.current = setInterval(() => {
-        api.scrollNext();
-      }, 5000); // Auto-slide every 3 seconds
-    };
-
-    const stopAutoplay = () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-        intervalRef.current = undefined;
-      }
-    };
-
-    startAutoplay();
-
-    api.on("select", () => {
-      stopAutoplay();
-      startAutoplay(); // Reset timer on user interaction
-    });
-
-    return () => {
-      stopAutoplay();
-      api.off("select", () => {
-        console.log("Remove Card")
-      });
-    };
-  }, [api]);
-
+  const plugin = useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: false })
+  )
   return (
     <section className="w-11/12 mx-auto lg:hidden ">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-muted-foreground text-center">
@@ -69,18 +24,20 @@ export default function ProjectSectionMobile() {
         DevRedBox has built a very limited number of projects by now. This shall grow by time.
       </p>
       <Carousel
-        setApi={setApi} className="w-full" opts={{
+        className="w-full"
+        opts={{
           loop: true
         }}
+        plugins={[plugin.current]}
 
       >
         <CarouselContent
           className="sm:w-8/12"
         >
-          {PROJECTS.map((project, index) => (
+          {DEVREDBOX_PROJECTS.map((project, index) => (
             <CarouselItem key={index}>
               <div className="p-4">
-                <div className="aspect-[4/3] bg-gray-200 rounded-lg overflow-hidden mb-4 border">
+                <div className="aspect-[4/5] bg-gray-200 rounded overflow-hidden mb-1 border relative">
                   <Image
                     src={project.banner}
                     alt={project.title}
@@ -89,7 +46,18 @@ export default function ProjectSectionMobile() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
+                <CarouselProgress index={index} />
+                <a href={project.link} target="_blank" className="text-lg font-semibold flex items-center gap-4 mt-5 mb-2 border-b pb-2 hover:underline">
+                  <Image
+                    src={project.logo}
+                    alt={project.title}
+                    width={64}
+                    height={64}
+                    className="w-5 h-5 object-cover"
+                  />
+                  {project.title}
+                  <ArrowUpRight className="ml-auto text-muted-foreground size-4" />
+                </a>
                 <p className="text-sm text-gray-600">{project.detail}</p>
               </div>
             </CarouselItem>
@@ -97,5 +65,44 @@ export default function ProjectSectionMobile() {
         </CarouselContent>
       </Carousel>
     </section>
+  );
+}
+
+function CarouselProgress({ index }: { index: number }) {
+  const { api } = useCarousel();
+  const [progress, setProgress] = useState(0);
+  const delay = 5000; // matches the autoplay delay
+
+  useEffect(() => {
+    if (!api) return;
+
+    const updateProgress = () => {
+      const currentIndex = api.selectedScrollSnap();
+      if (currentIndex === index) {
+        const timeLeft = api.plugins().autoplay?.timeUntilNext();
+        if (timeLeft !== null) {
+          setProgress(((delay - timeLeft) / delay) * 100);
+        } else {
+          setProgress(0);
+        }
+      } else {
+        setProgress(0);
+      }
+    };
+
+    const interval = setInterval(updateProgress, 50);
+
+    api.on('select', updateProgress);
+
+    return () => {
+      clearInterval(interval);
+      api.off('select', updateProgress);
+    };
+  }, [api, index, delay]);
+
+  return (
+    <div className="w-full h-1 bg-foreground/50 rounded-full overflow-hidden bottom-0">
+      <div className="h-full bg-foreground/90 transition-all duration-50 ease-linear" style={{ width: `${progress}%` }}></div>
+    </div>
   );
 }

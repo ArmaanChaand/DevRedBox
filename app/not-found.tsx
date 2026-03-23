@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 export default function NotFound() {
     return (
-        <div className="h-screen flex justify-center items-center flex-col text-center space-y-3">
+        <div className="h-screen w-11/12 mx-auto flex justify-center items-center flex-col text-center space-y-3">
             <h1 className="text-2xl font-semibold">You Are Lost!</h1>
             <p className="max-w-lg">
                 The link may be broken, or the page may have been removed. Whatever you were looking for, it&apos;s not here anymore.

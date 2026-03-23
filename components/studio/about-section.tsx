@@ -3,7 +3,7 @@ import { DevRedBoxLogoRaw } from "@/components/ui/devredbox-logo";
 
 export default function AboutSection() {
   return (
-    <section className="section-wrapper bg-foreground text-background p-8 rounded-2xl space-y-8">
+    <section className="section-wrapper bg-foreground text-background p-5 sm:p-8 rounded-2xl space-y-8">
       <h2 className="text-2xl sm:text-3xl font-black flex items-center flex-wrap gap-2">
         <span>We</span> <span>at</span>
         <span className="p-2 sm:p-3 rounded-xl inline-block bg-background">

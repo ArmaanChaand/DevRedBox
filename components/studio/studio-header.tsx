@@ -71,21 +71,21 @@ export default function StudioHeader() {
       >
         <ul className="flex text-xl flex-col justify-start items-start mt-8 gap-5">
           <li className="">
-            <Link href={"/about"}>About</Link>
+            <Link onClick={()=>setOpen(false)} href={"/about"}>About</Link>
           </li>
           <li className="">
-            <Link href={"/projects"}>Projects</Link>
+            <Link onClick={()=>setOpen(false)} href={"/projects"}>Projects</Link>
           </li>
           <li className="">
-            <Link href={"/library"} className="">
+            <Link onClick={()=>setOpen(false)} href={"/library"} className="">
               Library
             </Link>
           </li>
           <li className="">
-            <Link href={"/about"}>Contact</Link>
+            <Link onClick={()=>setOpen(false)} href={"/contact"}>Contact</Link>
           </li>
           <li className="">
-            <Link href={"/projects"}>LinkedIn</Link>
+            <a href="https://linkedin.com/in/armaanchaand/" target="_blank">LinkedIn</a>
           </li>
         </ul>
       </nav>

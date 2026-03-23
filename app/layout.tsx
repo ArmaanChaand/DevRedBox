@@ -60,7 +60,7 @@ export default function RootLayout({
         className={"" + " " + outfit.className} // Space at the end of string is required
       >
         <StudioHeader />
-        <main className="min-h-screen">
+        <main>
           {children}
         </main>
         <FooterStudio />

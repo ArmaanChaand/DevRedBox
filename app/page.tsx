@@ -37,7 +37,7 @@ export default function Home() {
         <ServicesSection />
       </div>
       
-      <div className="mb-28 lg:mb-0">
+      <div className="mb-28">
         <ProjectSectionMobile />
         <ProjectsSection />
       </div>

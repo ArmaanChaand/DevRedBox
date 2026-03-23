@@ -43,10 +43,8 @@ export default function ProjectsSection() {
             <h2 className="text-3xl md:text-4xl font-bold mb-2 underline">
               Our Projects
             </h2>
-            <p className="text-base mb-4">What we&apos;ve built so far.</p>
-            <Button variant={"link"} asChild>
-              <Link href={"/"}>View All Projects <ChevronRight /> </Link>
-            </Button>
+            <p className="text-base mb-4">What we&apos;ve built so far. <br/> More to come...</p>
+            
           </div>
         </div>
 

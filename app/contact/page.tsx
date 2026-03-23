@@ -17,7 +17,7 @@ export default function Home() {
         <div className="section-wrapper flex flex-col md:flex-row mt-20 md:mt-28 mb-20 gap-10">
             <section className="flex-1 space-y-5">
                 <h1 className="text-4xl font-black">Contact Us</h1>
-                <p>
+                <p className="text-muted-foreground">
                     Email us, call to book an appointment, find us on social media, or complete the form <span className="hidden md:inline-block">on the right</span> <span className="md:hidden">below</span> to get in touch.
                 </p>
                 <p className="">

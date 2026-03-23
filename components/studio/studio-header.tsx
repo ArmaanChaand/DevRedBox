@@ -30,7 +30,7 @@ export default function StudioHeader() {
               <Link href={"/about"}>About</Link>
             </li>
             <li className="hidden md:block">
-              <Link href={"/projects"}>Projects</Link>
+              <Link href={"/contact"}>Contact</Link>
             </li>
             <li className="hidden md:block">
               <Link href={"/library"} className="">
@@ -44,12 +44,15 @@ export default function StudioHeader() {
                 <span className="sr-only">DevRedBox</span>
               </Link>
             </li>
-            <li className="hidden md:block">
-              <Link href={"/contact"}>Contact</Link>
-            </li>
+
             <li className="hidden md:block">
               <a href="http://linkedin.com/in/armaanchaand/" target="_blank">
                 LinkedIn
+              </a>
+            </li>
+            <li className="hidden md:block">
+              <a href="https://x.com/devredbox" target="_blank">
+                Twitter
               </a>
             </li>
             <li className="hidden md:block">
@@ -71,21 +74,23 @@ export default function StudioHeader() {
       >
         <ul className="flex text-xl flex-col justify-start items-start mt-8 gap-5">
           <li className="">
-            <Link onClick={()=>setOpen(false)} href={"/about"}>About</Link>
+            <Link onClick={() => setOpen(false)} href={"/about"}>About</Link>
           </li>
           <li className="">
-            <Link onClick={()=>setOpen(false)} href={"/projects"}>Projects</Link>
-          </li>
-          <li className="">
-            <Link onClick={()=>setOpen(false)} href={"/library"} className="">
+            <Link onClick={() => setOpen(false)} href={"/library"} className="">
               Library
             </Link>
           </li>
           <li className="">
-            <Link onClick={()=>setOpen(false)} href={"/contact"}>Contact</Link>
+            <Link onClick={() => setOpen(false)} href={"/contact"}>Contact</Link>
           </li>
           <li className="">
             <a href="https://linkedin.com/in/armaanchaand/" target="_blank">LinkedIn</a>
+          </li>
+          <li className="">
+            <a href={MEETING_LINK} target="_blank">
+              Call
+            </a>
           </li>
         </ul>
       </nav>

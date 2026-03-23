@@ -11,5 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         {
             url: SITE_ORIGIN + "/contact",
         },
+        {
+            url: SITE_ORIGIN + "/about",
+        },
     ]
 }

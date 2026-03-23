@@ -44,7 +44,7 @@ export default function FooterStudio() {
                     <div className="grid grid-cols-2 mt-10 sm:mt-0">
                         <nav className="flex flex-col justify-start items-start gap-3">
                             <span className="text-muted-foreground font-semibold text-sm mb-2 underline underline-offset-4">Studio</span>
-                            <Link href="/projects">Projects</Link>
+                            <Link href="/about">About</Link>
                             <Link href="/contact">Contact</Link>
                         </nav>
                         <nav className="flex flex-col justify-start items-start gap-3">

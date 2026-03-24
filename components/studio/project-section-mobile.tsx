@@ -5,6 +5,7 @@ import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay"
 import { DEVREDBOX_PROJECTS } from "@/lib/content/projects";
 import { ArrowUpRight } from "lucide-react";
+import VideoPlayer from "@/components/ui/video-player";
 
 
 export default function ProjectSectionMobile() {
@@ -38,13 +39,24 @@ export default function ProjectSectionMobile() {
             <CarouselItem key={index}>
               <div className="p-4">
                 <div className="aspect-[4/5] bg-gray-200 rounded overflow-hidden mb-1 border relative">
-                  <Image
-                    src={project.banner}
-                    alt={project.title}
-                    width={400}
-                    height={300}
-                    className="w-full h-full object-cover"
-                  />
+                  {
+                    project.showcase.endsWith(".mp4") ?
+                      // With multiple formats + custom fallback colour
+                      <VideoPlayer
+                        src={project.showcase}
+                        poster={project.banner}
+                        fallbackColor="#0d0d0d"
+                        className="aspect-[4/5] w-full h-full"
+                      />
+                      :
+                      <Image
+                        src={project.showcase}
+                        alt={project.title}
+                        width={400}
+                        height={500}
+                        className="w-full h-full object-cover rounded-2xl"
+                      />
+                  }
                 </div>
                 <CarouselProgress index={index} />
                 <a href={project.link} target="_blank" className="text-lg font-semibold flex items-center gap-4 mt-5 mb-2 border-b pb-2 hover:underline">

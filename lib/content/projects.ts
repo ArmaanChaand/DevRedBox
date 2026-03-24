@@ -4,6 +4,7 @@ export const DEVREDBOX_PROJECTS = [
     detail:
       "For fellow developers and solo founders, a well curated and crafted code library which hosts every UI needs — components, blocks, templates and ui kits. Along with SaaS starter packs.",
     banner: "/projects/library.webp",
+    showcase: "/projects/library.webp",
     logo: "/projects/library.webp",
     link: "https://library.devredbox.in",
   },
@@ -12,6 +13,7 @@ export const DEVREDBOX_PROJECTS = [
     detail:
       "The go-to platform to create text posts for LinkedIn, Twitter (now X) and Threads from any video on YouTube — or as fellow developers like to call it, just another AI wrapper.",
     banner: "/devredbox-banner.webp",
+    showcase: "/projects/thouhomar-demo.mp4",
     logo: "/projects/thouhomar.webp",
     link: "https://thouhomar.xyz",
   },

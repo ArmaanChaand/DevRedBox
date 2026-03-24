@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import VideoPlayer from "@/components/ui/video-player";
 import { DEVREDBOX_PROJECTS } from "@/lib/content/projects";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
@@ -42,8 +43,8 @@ export default function ProjectsSection() {
             <h2 className="text-3xl md:text-4xl font-bold mb-2 underline">
               Our Projects
             </h2>
-            <p className="text-base mb-4">What we&apos;ve built so far. <br/> More to come...</p>
-            
+            <p className="text-base mb-4">What we&apos;ve built so far. <br /> More to come...</p>
+
           </div>
         </div>
 
@@ -51,14 +52,25 @@ export default function ProjectsSection() {
         <div className="flex-1">
           <div className="space-y-16 w-full">
             {DEVREDBOX_PROJECTS.map((p) => (
-              <div key={p.logo} className="w-full aspect-[4/5]">
-                <Image
-                  src={p.banner}
-                  alt={p.title}
-                  width={400}
-                  height={500}
-                  className="w-full h-full object-cover rounded-2xl"
-                />
+              <div key={p.logo} className="w-full aspect-[4/5] rounded-xl shadow overflow-hidden">
+                {
+                  p.showcase.endsWith(".mp4") ?
+                    // With multiple formats + custom fallback colour
+                    <VideoPlayer
+                      src={p.showcase}
+                      poster={p.banner}
+                      fallbackColor="#0d0d0d"
+                      className="aspect-[4/5] w-full h-full"
+                    />
+                    :
+                    <Image
+                      src={p.showcase}
+                      alt={p.title}
+                      width={400}
+                      height={500}
+                      className="w-full h-full object-cover rounded-2xl"
+                    />
+                }
               </div>
             ))}
           </div>

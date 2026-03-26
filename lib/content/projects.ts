@@ -4,7 +4,7 @@ export const DEVREDBOX_PROJECTS = [
     detail:
       "For fellow developers and solo founders, a well curated and crafted code library which hosts every UI needs — components, blocks, templates and ui kits. Along with SaaS starter packs.",
     banner: "/projects/library.webp",
-    showcase: "/projects/library.webp",
+    showcase: "/projects/library-showcase.webp",
     logo: "/projects/library.webp",
     link: "https://library.devredbox.in",
   },

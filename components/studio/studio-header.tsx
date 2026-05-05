@@ -38,7 +38,7 @@ export default function StudioHeader() {
 
   return (
     <header
-      className="fixed top-0 z-50 bg-background w-full"
+      className="fixed top-0 z-50 bg-background w-full h-fit"
     >
       <div className="section-wrapper mx-auto flex justify-between items-center">
         <nav className="w-full max-w-xl lg:max-w-3xl flex justify-between items-center mx-auto py-5 relative [&_a]:hover:underline">

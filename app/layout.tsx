@@ -6,10 +6,12 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import { JsonLd } from "@/components/ui/json-ld";
 import StudioHeader from "@/components/studio/studio-header";
 import FooterStudio from "@/components/studio/studio-footer";
+import { cn } from "@/lib/utils";
 
 const outfit = Outfit({
   subsets: ["latin"],
-  weight: "variable"
+  weight: "variable",
+  variable: "--font-sans"
 })
 
 export const viewport: Viewport = {
@@ -57,7 +59,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={"" + " " + outfit.className} // Space at the end of string is required
+        className={cn("font-sans min-h-svh", outfit.variable)} // Space at the end of string is required
       >
         <StudioHeader />
         <main>

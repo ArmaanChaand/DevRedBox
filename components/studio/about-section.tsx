@@ -6,8 +6,8 @@ export default function AboutSection() {
     <section className="section-wrapper bg-foreground text-background p-5 sm:p-8 rounded-2xl space-y-8">
       <h2 className="text-2xl sm:text-3xl font-black flex items-center flex-wrap gap-2">
         <span>We</span> <span>at</span>
-        <span className="p-2 sm:p-3 rounded-xl inline-block bg-background">
-          <DevRedBoxLogoRaw className="text-foreground w-14 sm:w-16" />
+        <span className="p-2 rounded-xl inline-block bg-background">
+          <DevRedBoxLogoRaw className="text-foreground h-4 w-16 md:w-20 md:h-5" />
         </span>
         <span>builds,</span> <span>launch</span> <span>&amp;</span> <span>scale</span> <span>SaaS</span> <span>MVPs</span> <span>for</span> <span>solo</span> <span>founders.</span>
       </h2>

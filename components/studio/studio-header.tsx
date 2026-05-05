@@ -1,29 +1,46 @@
 "use client";
-import Link from "next/link";
-import { DevRedBoxLogoRaw } from "../ui/devredbox-logo";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { motion } from "motion/react";
+import { usePathname } from "next/navigation";
 import { Equal, X } from "lucide-react";
-import { useState } from "react";
+import { DevRedBoxLogoRaw } from "@/components/ui/devredbox-logo";
 import { MEETING_LINK } from "@/lib/info";
 
+const mbNavItems = [
+  {
+    name: "About",
+    link: "/about",
+  },
+  {
+    name: "Library",
+    link: "/library",
+  },
+  {
+    name: "Contact",
+    link: "/contact",
+  },
+  {
+    name: "LinkedIn",
+    link: "http://linkedin.com/in/armaanchaand/",
+  },
+];
 export default function StudioHeader() {
   const [open, setOpen] = useState(false);
+
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setOpen(prev => prev ? false : prev)
+
+  }, [pathname])
 
   return (
     <header
       className="fixed top-0 z-50 bg-background w-full"
-      style={{
-        height: open ? "100vh" : "fit-content",
-      }}
     >
       <div className="section-wrapper mx-auto flex justify-between items-center">
-        <Button
-          onClick={() => setOpen((v) => !v)}
-          variant={"outline"}
-          className="md:hidden shadow-none mr-3"
-        >
-          {open ? <X className="size-5" /> : <Equal className="size-5" />}
-        </Button>
         <nav className="w-full max-w-xl lg:max-w-3xl flex justify-between items-center mx-auto py-5 relative [&_a]:hover:underline">
           <ul className="flex-1 text-sm lg:text-base flex justify-center md:justify-between items-center">
             <li className="hidden md:block">
@@ -62,38 +79,49 @@ export default function StudioHeader() {
             </li>
           </ul>
         </nav>
-        <Button variant={"inverted"} className="md:hidden" asChild>
-          <a href={MEETING_LINK} target="_blank">
-            Book a Call
-          </a>
+         <Button
+          onClick={() => setOpen((v) => !v)}
+          variant={"outline"}
+          className="md:hidden shadow-none mr-3"
+        >
+          {open ? <X className="size-5" /> : <Equal className="size-5" />}
         </Button>
       </div>
-      <nav
-        style={{ display: open ? "block" : "none" }}
-        className="section-wrapper mx-auto"
+      <motion.div
+        className="h-0 w-full bg-background md:hidden overflow-hidden px-5"
+        transition={{
+          ease: [0.34, 1.56, 0.64, 1]
+        }}
+        style={{
+          height: open ? 'calc(100vh - 4rem)' : '0'
+        }}
+        layout
       >
-        <ul className="flex text-xl flex-col justify-start items-start mt-8 gap-5">
-          <li className="">
-            <Link onClick={() => setOpen(false)} href={"/about"}>About</Link>
-          </li>
-          <li className="">
-            <Link onClick={() => setOpen(false)} href={"/library"} className="">
-              Library
-            </Link>
-          </li>
-          <li className="">
-            <Link onClick={() => setOpen(false)} href={"/contact"}>Contact</Link>
-          </li>
-          <li className="">
-            <a href="https://linkedin.com/in/armaanchaand/" target="_blank">LinkedIn</a>
-          </li>
-          <li className="">
-            <a href={MEETING_LINK} target="_blank">
-              Call
-            </a>
-          </li>
-        </ul>
-      </nav>
+        <nav className="w-full my-3">
+          <ul className="flex flex-col justify-start items-start gap-3 divide-y">
+            {
+              mbNavItems.map((item, idx) => (
+                <li key={`mb-link-${idx}`} className="w-full pb-3">
+                  <Link href={item.link} className="text-base text-muted-foreground hover:text-foreground transition-all duration-300">
+                    {item.name}
+                  </Link>
+                </li>))
+            }
+          </ul>
+        </nav>
+        <Button
+          type="button"
+          variant={"primary"}
+          size={"xl"}
+          className="w-full"
+          asChild
+        >
+          <a href={MEETING_LINK} target="_blank" title="Visit DevRedBox Studio">
+            Book a Call
+
+          </a>
+        </Button>
+      </motion.div>
     </header>
   );
 }
